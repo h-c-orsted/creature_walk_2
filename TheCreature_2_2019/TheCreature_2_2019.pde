@@ -27,7 +27,7 @@ void setup() {
 void draw() {      
   float ballwalk =  sin(ballX*0.5)*10;  //svingning på +10 til -10 pixels 
   ballX         =  ballX  +  speedX;    //flytter min bold 
-  ballY         =  ballY  +  speedY + ballwalk;
+  ballY         =  ballY  +  speedY + ballwalk; // flytter bolden på y-aksen, men med svingningen på +/- 10px så den hopper
   ballSize      =  (ballSize*zoomFactor); //gør mit bold størrere
   eyeSize       =  (eyeSize*zoomFactor);  // gør øjnene større
   eyeRightRelativeX *=zoomFactor;
