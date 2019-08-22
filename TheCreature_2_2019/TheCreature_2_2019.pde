@@ -6,13 +6,11 @@
 //Opgave 4: Skriv kode-kommentarer, der forklarer dine rettelser og upload til gitHub.
 //Opgave 5: Aflever dokument med link på lectio (lectio registrerer ikke en kommentar som aflevering)
 
-// Changed datatype from int to float so that the number can be multiplied by a decimel number
+// Changed datatype from int to float so that the number can be multiplied by a decimal number
 float   ballX             = 100 ,  ballY             = 100;
 float   eyeLeftRelativeX  = 5   ,  eyeLeftRelativeY  = 5;
 float   eyeRightRelativeX = 20  ,  eyeRightRelativeY = 5;  
-
-// Speed can remain an int
-int   speedX            = 1   ,  speedY            = 1;
+float   speedX            = 1   ,  speedY            = 1;
 
 // No change to these
 float ballSize          = 50;
@@ -27,9 +25,9 @@ void setup() {
 
 //draw: kører default 30  gange per sekund
 void draw() {      
-  //float ballwalk =  sin(ballX*0.5)*10;  //svingning på +10 til -10 pixels 
+  float ballwalk =  sin(ballX*0.5)*10;  //svingning på +10 til -10 pixels 
   ballX         =  ballX  +  speedX;    //flytter min bold 
-  ballY         =  ballY  +  speedY;
+  ballY         =  ballY  +  speedY + ballwalk;
   ballSize      =  (ballSize*zoomFactor); //gør mit bold størrere
   eyeSize       =  (eyeSize*zoomFactor);  // gør øjnene større
   eyeRightRelativeX *=zoomFactor;
